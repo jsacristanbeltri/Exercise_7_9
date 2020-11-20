@@ -1,20 +1,33 @@
+//Author: Jorge Sacristan
+
 using System;
-public class Average{
-public static void Main(){
-double a=0, b, c=0, d;
-string s;
-Console.Write("Insert a mark: ");
-s=Console.ReadLine();	// we read the mark as string to check the word "end"	 
-while(s!="end"){  // if the mark isn't an end then we pass it to double to work with it
-b=Convert.ToDouble(s);
-c++;   //counter of numbers
-a+=b;  // sum of all the notes
-Console.Write("Insert a mark: ");
-s=Console.ReadLine();
-}
-if(c!=0){
-	d=a/c;  //calculate the average
-Console.WriteLine("The average is {0}.",d);
-}
-}
+
+//This class will calculate the average of marks that the user will input .
+public class AverageMarks
+{
+	public static void Main()
+	{
+		double totalMarks = 0, userMark, countMarks = 0, averageMarks;
+		string inputUser;
+
+		Console.Write("Insert a mark: ");
+		inputUser = Console.ReadLine();	 
+
+		while(inputUser != "end")			
+		{  
+			userMark=Convert.ToDouble(s);
+			countMarks++;   
+			totalMarks += userMark;  
+		
+			Console.Write("Insert a mark: ");
+			inputUser = Console.ReadLine();
+		}
+		
+		if(countMarks != 0)
+		{
+			averageMarks = totalMarks / countMarks;  
+			Console.WriteLine("The average is {0}.",d);
+
+		}
+	}
 }
